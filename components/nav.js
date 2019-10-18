@@ -46,15 +46,12 @@ const NavBar = (props) => {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink onClick={togglePatient}>Patient Register</NavLink>
-                <Modal isOpen={modalPatient} toggle={togglePatient} className={className}>
+                <Modal isOpen={modalPatient} toggle={togglePatient} className={className} className="form-register">
                 <ModalHeader toggle={togglePatient}>Modal title</ModalHeader>
                 <ModalBody>
                   <Register />
                 </ModalBody>
-                <ModalFooter>
-                  <Button color="primary" onClick={togglePatient}>Do Something</Button>{' '}
-                  <Button color="secondary" onClick={togglePatient}>Cancel</Button>
-                </ModalFooter>
+                
               </Modal>
               </NavItem>
               <NavItem>
@@ -64,10 +61,7 @@ const NavBar = (props) => {
                 <ModalBody>
                   <Register />
                 </ModalBody>
-                <ModalFooter>
-                  <Button color="primary" onClick={toggleHospital}>Do Something</Button>{' '}
-                  <Button color="secondary" onClick={toggleHospital}>Cancel</Button>
-                </ModalFooter>
+                
               </Modal>
               </NavItem>
               <NavItem>
@@ -77,10 +71,7 @@ const NavBar = (props) => {
                 <ModalBody>
                   <Register />
                 </ModalBody>
-                <ModalFooter>
-                  <Button color="primary" onClick={toggleHospital}>Do Something</Button>{' '}
-                  <Button color="secondary" onClick={toggleHospital}>Cancel</Button>
-                </ModalFooter>
+                
               </Modal>
               </NavItem>
               

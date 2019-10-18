@@ -29,7 +29,7 @@ const Register = (props) => {
   return (
     <div>
         
-        <Form>
+        <Form >
         <Row form>
         <Col sm="12" md={{ size: 6, offset: 3 }}>
             <FormGroup>
@@ -70,10 +70,6 @@ const Register = (props) => {
                 <ModalBody>
                   <Login />
                 </ModalBody>
-                <ModalFooter>
-                  <Button color="primary" onClick={togglePatient}>Do Something</Button>{' '}
-                  <Button color="secondary" onClick={togglePatient}>Cancel</Button>
-                </ModalFooter>
               </Modal>
         </Form>
     </div>

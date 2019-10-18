@@ -97,10 +97,34 @@ class Home extends React.Component{
             <Swing>
               <img id="demo" src="/background.jpg"  />
             </Swing>
-            
+            <Shake h={5} v={5} r={3} dur={300} int={10} max={100} fixed={true} fixedStop={false} freez={false}>
+             
+              <span id="svg-first">
+              <svg width="100" height="100">
+                
+                  <circle cx="50" cy="50" r="40" stroke="yellow" stroke-width="4" fill="yellow" />
+                
+              </svg>
+              </span>
+            </Shake>
+            <span id="svg-second">
+              <svg width="100" height="100" >
+                  <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="blue" />
+              </svg>
+            </span>
+            <span id="svg-third">
+              <svg width="300" height="200" class="polygon">
+                  <polygon points="100,10 40,198 190,78 10,78 160,198"  />
+              </svg>
+            </span>
             <div class="inner-div">
               <Jump>
-                <h1>We </h1>
+                <h1 class="h1">We </h1>
+                <span id="svg-second">
+                  <svg width="100" height="100" >
+                      <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="blue" />
+                  </svg>
+                </span>
               </Jump>
               <RubberBand>
                 <p class="para">
@@ -113,17 +137,18 @@ class Home extends React.Component{
             </div>
           </div>
         
+        
         <Slide left>
           <Row className="div-class">
             <Col xs="6">
               <Shake h={5} v={5} r={3} dur={300} int={10} max={100} fixed={true} fixedStop={false} freez={false}>
                 <div class="outer-div-class">
-                  We provide you
+                  We provide you with the best feature from all over the world.
                 </div>
               </Shake>
             </Col>
             <Col xs="6">
-              <Shake h={5} v={5} r={3}>
+              <Shake h={5} v={5} r={3} dur={300} int={10} max={100} fixed={true} fixedStop={false} freez={false}>
                 <div class="outer-div-class">
                 </div>
               </Shake>
@@ -141,7 +166,7 @@ class Home extends React.Component{
             </div>
           </RubberBand>
           <Row id="outer-container" > 
-            <Col sm="3">
+            <Col sm="3" lg="3" xs="3">
               <Slide bottom>
                 <Card body className="card">
                 <CardImg top width="100%" src="/background.jpg" alt="Card image cap" />
@@ -154,16 +179,13 @@ class Home extends React.Component{
                     <ModalBody>
                       <Register />
                     </ModalBody>
-                    <ModalFooter>
-                      <Button color="primary" onClick={this.togglePatient}>Do Something</Button>{' '}
-                      <Button color="secondary" onClick={this.togglePatient}>Cancel</Button>
-                    </ModalFooter>
+                    
                   </Modal>
                 </Card>
               </Slide>
               
             </Col>
-            <Col sm="3">
+            <Col xs="3">
             <Slide bottom>
               <Card body className="card">
               <CardImg top width="100%" src="/background.jpg" alt="Card image cap" />       
@@ -175,31 +197,27 @@ class Home extends React.Component{
                   <ModalBody>
                     <Hospital />
                   </ModalBody>
-                  <ModalFooter>
-                    <Button color="primary" onClick={this.toggleHospital}>Do Something</Button>{' '}
-                    <Button color="secondary" onClick={this.toggleHospital}>Cancel</Button>
-                  </ModalFooter>
+                  
                 </Modal>
               </Card>
               </Slide>
             </Col>
-            <Col sm="3">
+            <Col xs="3">
             <Slide bottom>
               <Card body className="card">
               <CardImg top width="100%" src="/background.jpg" alt="Card image cap" />
                 <CardTitle>Special Title Treatment</CardTitle>
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                 <Button className="buttonn" onClick={this.toggleMedicine}>Consult Doctor</Button>
-                <Modal isOpen={this.state.modalMedicine} toggle={this.toggleMedicine} className={this.props.className}>
-                <ModalHeader toggle={this.toggleMedicine}>Modal title</ModalHeader>
-                <ModalBody>
-                  <Login />
-                </ModalBody>
-                <ModalFooter>
-                  <Button color="primary" onClick={this.toggleMedicine}>Do Something</Button>{' '}
-                  <Button color="secondary" onClick={this.toggleMedicine}>Cancel</Button>
-                </ModalFooter>
-              </Modal>
+                  <div class="form-register">
+                    <Modal isOpen={this.state.modalMedicine} toggle={this.toggleMedicine} className={this.props.className} >
+                      <ModalHeader toggle={this.toggleMedicine}>Modal title</ModalHeader>
+                      <ModalBody>
+                        <Login />
+                      </ModalBody>
+                  
+                    </Modal>
+                  </div>
               </Card>
             </Slide>
             </Col>
