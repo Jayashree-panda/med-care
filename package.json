@@ -15,7 +15,7 @@
     "csshake": "^1.5.3",
     "express": "^4.17.1",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "9.1.1",
+    "next": "11.1.0",
     "nodemon": "^1.19.3",
     "radium": "^0.26.0",
     "rc-animate": "^2.10.1",
